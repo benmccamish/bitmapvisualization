@@ -1,0 +1,97 @@
+.controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+#stepDescription {
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.visualization {
+    background-color: var(--background-50);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    min-height: 400px;
+}
+
+@media (min-width: 410px) and (max-width: 767.98px) {
+    #animationCanvas {
+        max-height: 200px;
+        min-height: 200px;
+        max-width: 400px;
+    }
+    .visualization {
+        min-height: 300px;
+    }
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 410px) {
+    #animationCanvas {
+        max-height: 150px;
+        min-height: 150px;
+        max-width: 300px;
+    }
+    .visualization {
+        min-height: 250px;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+#animationInstructionText {
+    color: grey;
+}
+
+#input-data {
+    color: var(--text);
+    background-color: var(--background-50);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#input-data::placeholder {
+    color: grey;
+}
+
+#compressedSoFar {
+    background-color: var(--highlight);
+}
+
+/* Compressed Content Container */
+#compressedContainer {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    color: var(--text);
+    background-color: var(--background-50);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 60px;
+    scrollbar-width: auto;  /* For Firefox */
+    scrollbar-color: #888 #f1f1f1;  /* For Firefox */
+}
+
+/* Webkit scrollbar styles (Chrome, Safari, Edge) */
+#compressedContainer::-webkit-scrollbar {
+    height: 12px;
+}
+
+#compressedContainer::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+}
+
+#compressedContainer::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+}
+
+#compressedContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -1,0 +1,158 @@
+.diff-checker {
+    margin-top: 1rem;
+}
+
+.diff {
+    background-color: #fdd; /* Light red background for lines with differences */
+    border-radius: 5px;
+    margin-bottom: 1px;
+    transition: transform 200ms ease-in-out;
+}
+
+.diff:hover {
+    transform: scale(1.01);
+}
+
+.diff-input {
+    resize: none;
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+}
+
+/* Container to hold both text displays side by side */
+.comparison-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#result {
+    min-height: 80vh;
+    margin-bottom: 2rem;
+}
+.diff-container {
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    overflow-wrap: break-word;
+}
+
+/* Highlight added text */
+.added {
+    background-color: #d4fcbc;
+}
+
+/* Highlight removed text */
+.removed {
+    background-color: #fbb6c2;
+}
+
+.lines-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 600px;
+    overflow-y: scroll;
+}
+
+.line {
+    display: flex;
+    padding: 5px 0;
+}
+
+.chunk1, .chunk2 {
+    width: 45%;
+    padding: 0 5px;
+}
+
+.line1, .line2{
+    width: 45%;
+    padding: 0 5px;
+    display: inline-block;
+    word-wrap:break-word;
+}
+
+.line-number{
+    width: 10%;
+    padding: 0 5px;
+}
+.chunk1-header, .chunk2-header {
+    font-weight: bold;
+    width: 45%;
+    padding: 0 5px;
+}
+
+.line-number-header {
+    font-weight: bold;
+    width: 10%;
+    padding: 0 5px;
+
+}
+
+.detail-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.detail-line {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    display: inline-block;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.detail-line span {
+    display: inline-block; /* Ensure spans are treated as inline blocks */
+    text-align: center;    /* Align numbers properly */
+    width: 3ch;            /* Set width for consistent alignment (adjust based on number size) */
+    font-family: monospace; /* Use a fixed-width font */
+}
+
+.index-span {
+    font-weight: bold;
+    width: 3ch; /* Ensure consistent width with the number spans */
+    text-align: center;
+}
+
+.file-input {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.word-diff-highlight {
+    background-color: orange;
+}
+
+.selected-word-diff {
+    background-color: rgb(147, 213, 147);
+}
+
+
+.line.diff.active {
+    border-style: solid;
+    border-color: red;
+}
+
+.active-word {
+    border-style: solid;
+    border-color: rgb(147, 213, 147);
+}
+
+.diff-container {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.diff-container-header {
+
+}
