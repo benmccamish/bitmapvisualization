@@ -1,9 +1,23 @@
+:root { /* these are the settings of the variables in light mode */
+    --diff-background: #fdd;
+    --word-diff-highlight-bg: rgba(255,255,0,0.5)
+    --selected-word-diff-bg: rgb(255,165,0);
+    --active-border-color: red;
+}
+.dark-mode { /* in dark mode */
+    --diff-background: #3d1117;
+    --word-diff-highlight-bg: rgba(255,255,0,0.4);
+    --selected-word-diff-bg: rgb(255,165,0);
+    --active-border-color: red;
+}   
+
+
 .diff-checker {
     margin-top: 1rem;
 }
 
 .diff {
-    background-color: #fdd; /* Light red background for lines with differences */
+    background-color: var(--diff-background); /* Light red background for lines with differences */
     border-radius: 5px;
     margin-bottom: 1px;
     transition: transform 200ms ease-in-out;
@@ -30,13 +44,6 @@
     min-height: 80vh;
     margin-bottom: 2rem;
 }
-.diff-container {
-    width: 48%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    overflow-wrap: break-word;
-}
 
 /* Highlight added text */
 .added {
@@ -53,6 +60,7 @@
     padding: 10px;
     max-height: 600px;
     overflow-y: scroll;
+    color: var(--text);
 }
 
 .line {
@@ -92,6 +100,7 @@
 .detail-container {
     margin-top: 20px;
     overflow-x: auto;
+    padding-bottom: 2rem; /* Add padding at the bottom */
 }
 
 .detail-line {
@@ -103,7 +112,7 @@
 }
 
 .highlight {
-    background-color: yellow;
+    background-color: var(--selected-word-diff-bg);
 }
 
 .detail-line span {
@@ -127,32 +136,30 @@
 }
 
 .word-diff-highlight {
-    background-color: orange;
+    background-color: var(--word-diff-highlight-bg);
 }
 
 .selected-word-diff {
-    background-color: rgb(147, 213, 147);
+    background-color: var(--selected-word-diff-bg);
 }
-
 
 .line.diff.active {
     border-style: solid;
-    border-color: red;
+    border-color: var(--active-border-color);
 }
 
 .active-word {
     border-style: solid;
-    border-color: rgb(147, 213, 147);
+    border-color: var(--selected-word-diff-bg);
 }
 
 .diff-container {
+    border: 1px solid var(--text);
     border-radius: 10px;
-    border-style: solid;
-    border-color: black;
     width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
     margin-bottom: 2rem;
 }
 
-.diff-container-header {
-
-}

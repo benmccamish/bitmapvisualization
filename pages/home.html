@@ -26,6 +26,7 @@
                         <li><a href="#input-options">Input & Options</a></li>
                         <li><a href="#terms">Terms to Know</a></li>
                         <li><a href="#animations">Stepping Through Animations</a></li>
+                        <li><a href="#diff-checker">Using the Diff Checker</a></li>
                     </ul>
                 </div>
                 <div class="toc-card">
@@ -99,6 +100,54 @@
                 </div>
             </div>
         </section>
+        <section id="diff-checker" class="content-section">
+            <h2>Using the Diff Checker</h2>
+            <p>The Diff Checker helps you verify if your compression implementation is working correctly by comparing your output with the expected results.</p>
+
+            <div class="animation-demo">
+                <img src="../assets/diff_Checker_demo.gif" alt="Diff Checker demonstration" class="feature-image mb-3 rounded">
+            </div>
+
+            <div class="parameters-section">
+                <h3>How it works:</h3>
+                <ul>
+                    <li><strong>Your Input:</strong> Paste the compressed bitstring from your program's output.</li>
+                    <li><strong>Correct Output:</strong> Shows the expected compression result (automatically populated from Animation page).</li>
+                    <li><strong>Comparison Process:</strong>
+                        <ol>
+                            <li>Click "Compare" to see a line-by-line diff below the input boxes</li>
+                            <li>Click any different line to highlight specific word differences</li>
+                            <li>View detailed word-by-word differences in a scrollable comparison box</li>
+                            <li>Click individual words to see a bit-by-bit breakdown of differences</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Multi-level Comparison</h4>
+                <ul>
+                    <li>Line Level: See which lines contain differences</li>
+                    <li>Word Level: Compare specific words within a line</li>
+                    <li>Bit Level: Examine exact bit differences in each word</li>
+                </ul>
+            </div>
+
+            <div class="tip">
+                <strong>Pro Tip:</strong> Use the Animation page to generate correct outputs for your test cases. The results will automatically carry over to the Diff Checker for easy comparison.
+            </div>
+
+            <div class="start-button-container">
+                <a href="diff_checker.html" class="btn btn-primary btn-lg">
+                    Try Diff Checker
+                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16" style="margin-left: 0.5rem;">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        
 
         <section class="content-section">
             <h2>Compression Algorithms</h2>
@@ -217,7 +266,7 @@
                     <div class="example-section">
                         <h5>Compressed Result:</h5>
                         <div class="example-data">
-                            <span>01010000</span>
+                            <span>01010001</span>
                             <span>10000001</span>
                             <span>10101010</span>
                             <span>11100001</span>
@@ -285,7 +334,10 @@
                     <p class="mt-3">This demonstration shows a literal word, followed by runs ending on a dirty bit.</p>
 
                     <button class="btn btn-primary try-example-btn"
-                            onclick="tryExample('1010000000000000000000000000000000000000000000000000000000000000100000000000000', 16, 'plwah')">
+                            onclick="tryExample('101000000000000000000000000000000000000000000000000000000000100000000000000', 16, 'plwah')">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
                         Try this example
                     </button>
                 </div>
@@ -325,18 +377,22 @@
                     <p class="mt-3">This sequence presents a literal segment followed by a run, then another run ending in a literal.</p>
 
                     <button class="btn btn-primary try-example-btn"
-                            onclick="tryExample('101010111111111111111110000000000000001010101', 16, 'val', 2)">
+                            onclick="tryExample('101010111111111111111000000000000001010101', 16, 'val', 2)">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+                            </svg>
                         Try this example
                     </button>
                 </div>
             </div>
 
         </section>
-
         <section class="content-section">
             <h2>Ready to Start?</h2>
             <p>Head over to the <a href="animation.html">Animation page</a> to try it yourself! Experiment with different inputs, test various algorithms, and see how bitmap compression works in real-time. The best way to learn is by doing - try entering your own bit patterns and watch how they get compressed.</p>
         </section>
+
+        
 
         <!-- <section class="content-section">
             <h2>Diff Checker</h2>

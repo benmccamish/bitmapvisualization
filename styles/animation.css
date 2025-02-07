@@ -61,6 +61,16 @@ textarea {
     background-color: var(--highlight);
 }
 
+:root {
+    --scrollbar-color-fg: #888;
+    --scrollbar-color-bg: var(--accent-100);
+}
+
+.dark-mode {
+    --scrollbar-color-fg: #999;
+    --scrollbar-color-bg: var(--accent-200);
+}
+
 /* Compressed Content Container */
 #compressedContainer {
     width: 100%;
@@ -74,7 +84,7 @@ textarea {
     border-radius: 4px;
     height: 60px;
     scrollbar-width: auto;  /* For Firefox */
-    scrollbar-color: #888 #f1f1f1;  /* For Firefox */
+    scrollbar-color: var(--scrollbar-color-fg) var(--scrollbar-color-bg); /* For Firefox */
 }
 
 /* Webkit scrollbar styles (Chrome, Safari, Edge) */
@@ -83,12 +93,12 @@ textarea {
 }
 
 #compressedContainer::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--scrollbar-color-bg);
     border-radius: 6px;
 }
 
 #compressedContainer::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--scrollbar-color-fg);
     border-radius: 6px;
 }
 
