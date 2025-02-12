@@ -170,6 +170,8 @@ textarea::placeholder {
     background-color: var(--btn-primary-hover);
     border-color: var(--btn-primary-hover);
 }
+
+/* All this is for overriding bootstrap's default button color */
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {

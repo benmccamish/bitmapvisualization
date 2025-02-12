@@ -1,16 +1,49 @@
 :root { /* these are the settings of the variables in light mode */
     --diff-background: #fdd;
-    --word-diff-highlight-bg: rgba(255,255,0,0.5)
+    --word-diff-highlight-bg: rgba(255,255,0,0.5);
     --selected-word-diff-bg: rgb(255,165,0);
+    --highlight-word: rgba(255,165,0,0.5);
     --active-border-color: red;
 }
 .dark-mode { /* in dark mode */
     --diff-background: #3d1117;
     --word-diff-highlight-bg: rgba(255,255,0,0.4);
-    --selected-word-diff-bg: rgb(255,165,0);
+    --selected-word-diff-bg: rgba(255,180,0,0.8);
+    --highlight-word: rgba(255,165,0,0.5);
     --active-border-color: red;
 }   
 
+.btn-group {
+  display: flex;
+  overflow: hidden;
+}
+
+.btn {
+  justify-content: center;
+  font-size: 0.85rem; 
+}
+
+.btn-rounded-top {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+}
+
+.btn-rounded-bottom {
+    border-radius: 0 0 0.5rem 0.5rem !important;
+}
+
+#compression-settings-col {
+    background-color: var(--accent-200);
+    border-radius: 10px;
+}
+
+textarea {
+    height: 270px;
+}
+
+.unpadded-container {
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .diff-checker {
     margin-top: 1rem;
@@ -43,6 +76,7 @@
 #result {
     min-height: 80vh;
     margin-bottom: 2rem;
+    font-family: monospace;
 }
 
 /* Highlight added text */
@@ -112,7 +146,7 @@
 }
 
 .highlight {
-    background-color: var(--selected-word-diff-bg);
+    background-color: var(--highlight-word);
 }
 
 .detail-line span {
