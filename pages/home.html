@@ -105,14 +105,15 @@
             <p>The Diff Checker helps you verify if your compression implementation is working correctly by comparing your output with the expected results.</p>
 
             <div class="animation-demo">
-                <img src="../assets/diff_Checker_demo.gif" alt="Diff Checker demonstration" class="feature-image mb-3 rounded">
+                <img src="../assets/diffchecker.png" alt="Diff Checker demonstration" class="feature-image mb-3 rounded">
             </div>
 
             <div class="parameters-section">
                 <h3>How it works:</h3>
                 <ul>
-                    <li><strong>Your Input:</strong> Paste the compressed bitstring from your program's output.</li>
-                    <li><strong>Correct Output:</strong> Shows the expected compression result (automatically populated from Animation page).</li>
+                    <li><strong>Preform Compression:</strong> Toggle this depending on if you want the program to only compare an expected compression, or to also compress.</li>
+                    <li><strong>Your Compression:</strong> Paste the compressed bitstring from your program's output.</li>
+                    <li><strong>Uncompressed Data:</strong> This is where your uncompressed bitmap goes. (Or Expected Compression, if you don't have preform compression selected.)</li>
                     <li><strong>Comparison Process:</strong>
                         <ol>
                             <li>Click "Compare" to see a line-by-line diff below the input boxes</li>
@@ -125,17 +126,17 @@
             </div>
 
             <div class="highlight-box">
-                <h4>Multi-level Comparison</h4>
+                <h4>Other Features</h4>
                 <ul>
-                    <li>Line Level: See which lines contain differences</li>
-                    <li>Word Level: Compare specific words within a line</li>
-                    <li>Bit Level: Examine exact bit differences in each word</li>
+                    <li>Transpose: This button will transpose the uncompressed data.</li>
+                    <li>Choose File: Select custom input files</li>
+                    <li>Download Compressed file: This will preform the selected compression and immediatly download the compressed result.</li>
                 </ul>
             </div>
 
-            <div class="tip">
+            <!-- <div class="tip">
                 <strong>Pro Tip:</strong> Use the Animation page to generate correct outputs for your test cases. The results will automatically carry over to the Diff Checker for easy comparison.
-            </div>
+            </div> -->
 
             <div class="start-button-container">
                 <a href="diff_checker.html" class="btn btn-primary btn-lg">
