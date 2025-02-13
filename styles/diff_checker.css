@@ -165,8 +165,13 @@ textarea {
 .file-input {
     margin-top: 0.5rem;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.file-input input[type="file"] {
+    flex: 1;
 }
 
 .word-diff-highlight {
