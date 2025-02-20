@@ -14,13 +14,13 @@
 }   
 
 .btn-group {
-  display: flex;
-  overflow: hidden;
+    display: flex;
+    overflow: hidden;
 }
 
 .btn {
-  justify-content: center;
-  font-size: 0.85rem; 
+    justify-content: center;
+    font-size: 0.85rem; 
 }
 
 .btn-rounded-top {
@@ -202,3 +202,21 @@ textarea {
     margin-bottom: 2rem;
 }
 
+.ace-editor {
+    color: var(--text);
+    background-color: var(--background-50);
+    border-radius: 10px;
+    height: 270px;
+}
+
+.ace-editor .ace_cursor {
+    color: var(--text);
+}
+
+.ace-editor:not(:focus-within) .ace_cursor {
+    opacity: 0 !important;
+}
+
+.ace-editor .ace_placeholder {
+    color: gray;
+}
