@@ -220,3 +220,28 @@ textarea {
 .ace-editor .ace_placeholder {
     color: gray;
 }
+
+.nav-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.nav-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.nav-button:hover {
+    background-color: #e0e0e0;
+}
+
+.diff-container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
