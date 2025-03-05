@@ -3,11 +3,6 @@
     justify-content: space-between;
 }
 
-#stepDescription {
-    margin-bottom: 1rem;
-    font-size: 18px;
-}
-
 .visualization {
     background-color: var(--background-50);
     margin-bottom: 1rem;
@@ -15,31 +10,13 @@
     min-height: 400px;
 }
 
-@media (min-width: 410px) and (max-width: 767.98px) {
-    #animationCanvas {
-        max-height: 200px;
-        min-height: 200px;
-        max-width: 400px;
-    }
-    .visualization {
-        min-height: 300px;
-    }
-}
-
-/* Additional media query for very small screens */
-@media (max-width: 410px) {
-    #animationCanvas {
-        max-height: 150px;
-        min-height: 150px;
-        max-width: 300px;
-    }
-    .visualization {
-        min-height: 250px;
-    }
-}
-
 textarea {
     resize: none;
+}
+
+#stepDescription {
+    margin-bottom: 1rem;
+    font-size: 18px;
 }
 
 #animationInstructionText {
@@ -61,6 +38,7 @@ textarea {
     background-color: var(--highlight);
 }
 
+/* scrollbar color for dark and light mode */
 :root {
     --scrollbar-color-fg: #888;
     --scrollbar-color-bg: var(--accent-100);
@@ -110,3 +88,27 @@ textarea {
     width: 100%;
     height: 300px;
 }
+
+/* Resize canvas for mobile */
+@media (min-width: 410px) and (max-width: 767.98px) {
+    #animationCanvas {
+        max-height: 200px;
+        min-height: 200px;
+        max-width: 400px;
+    }
+    .visualization {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 410px) {
+    #animationCanvas {
+        max-height: 150px;
+        min-height: 150px;
+        max-width: 300px;
+    }
+    .visualization {
+        min-height: 250px;
+    }
+}
+

@@ -1,3 +1,4 @@
+/* Light mode color theme */
 :root {
     --text-50: #f1eff6;
     --text-100: #e2deed;
@@ -71,6 +72,7 @@
 
     --highlight: rgba(255, 255, 0, 0.3);
 }
+/* Dark mode color theme */
 .dark-mode {
     --text-50: #0b0910;
     --text-100: #161221;
@@ -84,9 +86,6 @@
     --text-900: #e2deed;
     --text-950: #f1eff6;
 
-    /*
-    --background-50: #090c10;
-    */
     --background-50: #141a22;
     --background-100: #121821;
     --background-200: #253041;
@@ -162,42 +161,27 @@ textarea::placeholder {
     color: gray !important;
 }
 
-.btn-primary {
-    background-color: var(--btn-primary);
-    border-color: var(--btn-primary);
-}
-.btn-primary:hover {
-    background-color: var(--btn-primary-hover);
-    border-color: var(--btn-primary-hover);
+.textarea-container {
+    position: relative;
+    width: 100%;
+    padding-left: 0rem;
+    padding-right: 0rem;
 }
 
-/* All this is for overriding bootstrap's default button color */
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
-    background-color: var(--btn-primary-active);
-    border-color: var(--btn-primary-active);
+.form-control {
+  width: 100%;
+  scrollbar-width: none;
 }
 
 .hidden {
     display: none;
 }
 
-/* navbar stuff */
-nav {
-    background-color: var(--background);
-}
-
-.navbar-brand {
-    color: var(--text);
-}
-
-.navbar-nav .nav-link.active {
-    color: var(--text);
-}
-
-.navbar-nav .nav-link {
-    color: gray;
+/* Ensure all buttons are visible when tabbed over for accessibility */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #007bff !important;
+    outline-offset: 3px;
 }
 
 #dark-mode-toggle:not(:disabled):not(.disabled):active {
@@ -209,16 +193,21 @@ nav {
 }
 
 
-.textarea-container {
-    position: relative;
-    width: 100%;
-    padding-left: 0rem;
-    padding-right: 0rem;
+.btn-primary {
+    background-color: var(--btn-primary);
+    border-color: var(--btn-primary);
+}
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover);
+    border-color: var(--btn-primary-hover);
 }
 
-.form-control {
-  width: 100%;
-  scrollbar-width: none;
+/* Replace bootstrap default button color with a color from our color theme */
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: var(--btn-primary-active);
+    border-color: var(--btn-primary-active);
 }
 
 #copyButtonIcon {
@@ -243,11 +232,20 @@ nav {
     background-color: var(--hover, #f8f9fa);
 }
 
-/* Ensure all buttons are visible when tabbed over 
- * for accessibility */
-button:focus-visible,
-a:focus-visible {
-    outline: 2px solid #007bff !important;
-    outline-offset: 3px;
+/* Navbar stuff */
+nav {
+    background-color: var(--background);
+}
+
+.navbar-brand {
+    color: var(--text);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--text);
+}
+
+.navbar-nav .nav-link {
+    color: gray;
 }
 

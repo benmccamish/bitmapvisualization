@@ -1,11 +1,12 @@
-:root { /* these are the settings of the variables in light mode */
+/* Light and dark mode colors */
+:root { 
     --diff-background: #fdd;
     --word-diff-highlight-bg: rgba(255,255,0,0.5);
     --selected-word-diff-bg: rgb(255,165,0);
     --highlight-word: rgba(255,165,0,0.5);
     --active-border-color: red;
 }
-.dark-mode { /* in dark mode */
+.dark-mode { 
     --diff-background: #3d1117;
     --word-diff-highlight-bg: rgba(255,255,0,0.4);
     --selected-word-diff-bg: rgba(255,180,0,0.8);
