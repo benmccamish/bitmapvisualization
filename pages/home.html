@@ -256,6 +256,7 @@
                         <div class="example-data">
                             <span>00000000 00000000 01000000</span>
                             <span class="run-indicator">[4 runs of zeros]</span>
+                            <span>10000000</span>
                             <span>10101010</span>
                             <span class="run-indicator">[13 runs of zeros]</span>
                             <span>10101010</span>
@@ -268,7 +269,8 @@
                         <h5>Compressed Result:</h5>
                         <div class="example-data">
                             <span>01010001</span>
-                            <span>10000001</span>
+                            <span>10000010</span>
+                            <span>10000000</span>
                             <span>10101010</span>
                             <span>11100001</span>
                             <span>00001101</span>
@@ -290,7 +292,7 @@
 
                     <button class="btn btn-primary try-example-btn"
                             onclick="tryExample(
-                                '000000000000000001000000' + generateRuns(8, 4) + '10101010' + generateRuns(8, 13) + '10101010' + generateRuns(8, 130) + '1010101010101010',
+                                '000000000000000001000000' + generateRuns(8, 4) + '1000000010101010' + generateRuns(8, 13) + '10101010' + generateRuns(8, 130) + '1010101010101010',
                                 8, 'bbc')">
                         <svg width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                             <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
