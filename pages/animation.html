@@ -80,7 +80,8 @@
                     <div class="row mb-3 align-items-center">
                         <div class="col-2 text-end">
                             <label for="input-data" class="form-label">
-                                Input</label>
+                                Input
+                            </label>
                         </div>
                         <div class="col-10">
                             <!-- Textbox for input bits -->
@@ -110,6 +111,22 @@
                                 </button>
                             </div>
                         </div> 
+                    </div>
+                    <!-- User warnings -->
+                    <div class="row align-items-center">
+                        <div class="col-2 text-end"></div>
+                        <div class="col-10">
+                            <div id="user-warning">
+                                <span id="warning-icon"
+                                    class="warning-icon"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    title="Warning: Newlines detected. They will be removed and input will become one line."
+                                    style="cursor: pointer; display: none;">
+                                    <i class="bi bi-exclamation-circle-fill"></i>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

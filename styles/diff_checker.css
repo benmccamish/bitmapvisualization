@@ -14,11 +14,6 @@
     --active-border-color: red;
 }   
 
-.btn-group {
-    display: flex;
-    overflow: hidden;
-}
-
 .btn {
     justify-content: center;
     font-size: 0.85rem; 
@@ -30,6 +25,11 @@
 
 .btn-rounded-bottom {
     border-radius: 0 0 0.5rem 0.5rem !important;
+}
+
+.btn-group {
+    display: flex;
+    overflow: hidden;
 }
 
 #compression-settings-col {
@@ -163,18 +163,6 @@ textarea {
     text-align: center;
 }
 
-.file-input {
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-}
-
-.file-input input[type="file"] {
-    flex: 1;
-}
-
 .word-diff-highlight {
     background-color: var(--word-diff-highlight-bg);
 }
@@ -228,17 +216,24 @@ textarea {
     margin-left: 20px;
 }
 
-.nav-button {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+.butn, .nav-button{
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
     border-radius: 4px;
-    padding: 5px 10px;
     cursor: pointer;
-    color: black;
+    border: 1px solid var(--accent-400);
+    background-color: var(--accent-200);
+    color: var(--text);
+    transition: all 200ms ease-in-out;
 }
 
-.nav-button:hover {
-    background-color: #e0e0e0;
+.butn:hover, .nav-button:hover {
+    background-color: var(--accent-300);
+    transform: translateY(-1px);
+}
+
+.file-input input[type="file"] {
+    display:none;
 }
 
 .diff-container-header {
