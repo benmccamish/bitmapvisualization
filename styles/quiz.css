@@ -1,0 +1,136 @@
+@import url("styles.css");
+
+.preQuizQuestions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:20px;
+  background-color: var(--accent-100);
+}
+
+.preQuizQuestions > div {
+  padding: 5px 20px;
+  margin-bottom: 10px;;
+  width: 70%;
+}
+
+
+.topics{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 10px;
+}
+
+.topics label{
+  margin: 0px 30px;
+}
+
+
+
+.quizContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  overflow-y:auto;
+}
+
+.quizContainer > div {
+  background-color: var(--accent-200);
+  padding: 20px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  width:70%;
+}
+
+.multipleChoice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+}
+.multipleChoice > label{
+  padding: 5px;
+}
+
+.blank {
+  width: 30px;
+}
+
+.centered {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+
+.dnd-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 5px;
+  min-height: 50px;
+  flex-wrap: wrap;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: var(--accent-300);
+  margin: 15px;
+}
+
+
+.dnd-item {
+  padding: 0px 20px;
+  border: 2px solid black;
+  cursor: grab;
+  border-radius: 5px;
+  background-color: var(--accent-400);
+}
+
+
+.results {
+  background-color: var(--accent-100);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.results > * {
+  padding: 5px;
+}
+
+.results > div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.correctAnswer{
+  background-color: var(--accent-300);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.highlightAns {
+  background-color: rgba(78, 162, 78, 0.823);
+  width: 100%;
+  border-radius: 10px;
+}
+
+.correct {
+  border: 2px solid green;
+}
+
+.wrong {
+  border: 2px solid red;
+}
