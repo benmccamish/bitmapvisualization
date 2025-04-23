@@ -134,3 +134,11 @@
 .wrong {
   border: 2px solid red;
 }
+
+
+@media (max-width: 768px) {
+  .preQuizQuestions > div,
+  .quizContainer > div {
+    width: 100%;
+  }
+}
